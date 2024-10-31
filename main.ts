@@ -46,6 +46,7 @@ input.onButtonPressed(Button.A, function () {
     while (loopCounter >= 0) {
         sprite.set(LedSpriteProperty.Y, loopCounter)
         loopCounter = loopCounter - 1
+        pause(500)
     }
 
     loopCounter = 5
@@ -53,11 +54,7 @@ input.onButtonPressed(Button.A, function () {
         sprite.set(LedSpriteProperty.X, loopCounter)
         loopCounter = loopCounter - 1
     }
-    loopCounter = 5
-    while (loopCounter > 0) {
-        sprite.set(LedSpriteProperty.Y, loopCounter)
-        loopCounter = loopCounter - 1
-    }
+    
     sprite.delete()
     basic.showIcon(IconNames.Happy)
 })
